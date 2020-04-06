@@ -42,8 +42,8 @@ func lambdaHandler() {
 }
 
 func main() {
-	lambdaHandler()
-	//lambda.Start(lambdaHandler)
+	//lambdaHandler()
+	lambda.Start(lambdaHandler)
 }
 
 func BuildMessage(message string) []byte {
