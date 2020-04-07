@@ -1,11 +1,11 @@
-name: Build
+name: BuildAndDeploy
 on:
   push:
     branch:
     - master
-jobs:
 
-  build:
+jobs:
+  BuildAndDeploy:
     name: Build
     runs-on: ubuntu-latest
     steps:
@@ -14,7 +14,6 @@ jobs:
       uses: actions/setup-go@v1
       with:
         go-version: 1.12
-      id: go
 
     - name: Check out code into the Go module directory
       uses: actions/checkout@v1
