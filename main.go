@@ -38,7 +38,7 @@ func lambdaHandler() {
 		fmt.Println(cases)
 	}
 
-	DiscordMessage := BuildMessage(fmt.Sprintf("```\\nCases: %13s\\nDeaths: %9s\\nRecovered: %7s\\n```", Format(cases.Total), Format(cases.Deaths), Format(cases.Recovered)))
+	DiscordMessage := BuildMessage(fmt.Sprintf("```\\nCases: %13s\\nDeaths: %10s\\nRecovered: %7s\\n```", Format(cases.Total), Format(cases.Deaths), Format(cases.Recovered)))
 	PostWebhook(DiscordWebHook, DiscordMessage)
 }
 
